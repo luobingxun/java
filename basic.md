@@ -120,36 +120,73 @@ String aDouble = s.nextLine();
    - 可以在类的内不和外部使用，可以通过类名或者实例对象去访问，一般推荐使用类名访问。
 
 #### 二. 继承
-1. 继承
-2. 权限访问修饰符
-3. 继承的特点
-4. 方法重写
-5. 子类构造器特点
-6. 子类构造器中使用兄弟构造器
+##### 1. 继承定义
+   ```java
+   public class ExtendsClass {
+       public static void main(String[] args) {
+           Animal dog = new Dog("金毛","黄色");
+           // 1. 成员方法：编译看左边
+           dog.eat();
+           // 2。成员变量：编译看左边运行看左边
+           System.out.println(dog.color);
+       }
+   }
+   
+   class Animal {
+       private String name;
+       String color;
+       public Animal (String name, String color) {
+           this.name = name;
+           this.color = color;
+       }
+       public void eat() {}
+       public String getName() {
+           return this.name;
+       }
+       public String getColor() {
+           return this.color;
+       }
+   }
+   
+   class Dog extends Animal{
+       public Dog(String name, String color) {
+           super(name, color);
+       }
+       @Override
+       public void eat() {
+           System.out.println(this.getName() + "是" + this.getColor());;
+       }
+   }
+   ```
+##### 2. 权限访问修饰符
+##### 3. 继承的特点
+##### 4. 方法重写
+##### 5. 子类构造器特点
+##### 6. 子类构造器中使用兄弟构造器
 
 #### 三. 多态
-1. 多态
-2. 多态的好处以及存在的问题
-3. 多态下的类型转换以及注意事项
-4. 多态案例
+##### 1. 多态
+##### 2. 多态的好处以及存在的问题
+##### 3. 多态下的类型转换以及注意事项
+##### 4. 多态案例
 
 ### Day3 面向对象（二）
 #### 一. final 关键字
-1. final 关键字与常量
-2. 单例模式
+##### 1. final 关键字与常量
+##### 2. 单例模式
 
 #### 二. 枚举类
-1. 枚举类的定义以及状态枚举
-2. 枚举类的应用场景
+##### 1. 枚举类的定义以及状态枚举
+##### 2. 枚举类的应用场景
 
 #### 三. 抽象类
-1. 抽象类的特点
-2. 抽象类的好处
-3. 模版设计模式
+##### 1. 抽象类的特点
+##### 2. 抽象类的好处
+##### 3. 模版设计模式
 
 #### 四. 接口
-1. 接口的定义以及特点
-2. 接口的好处
-3. JDK 8 之后新增特性
-4. 抽象类和接口的区别
+##### 1. 接口的定义以及特点
+##### 2. 接口的好处
+##### 3. JDK 8 之后新增特性
+##### 4. 抽象类和接口的区别
 
